@@ -73,19 +73,19 @@ jQuery(window).load(function(){
     });
 
     //Parallax Animation
-    jQuery('section[data-type="background"]').each(function(){
-            var $bgobj = $(this); // assigning the object
+    // jQuery('section[data-type="background"]').each(function(){
+    //         var $bgobj = $(this); // assigning the object
 
-            jQuery(window).scroll(function() {
-                            var yPos = -(jQuery(window).scrollTop() / $bgobj.data('speed')); 
+    //         jQuery(window).scroll(function() {
+    //                         var yPos = -(jQuery(window).scrollTop() / $bgobj.data('speed')); 
 
-                            // Put together our final background position
-                            var coords = '50% '+ yPos + 'px';
+    //                         // Put together our final background position
+    //                         var coords = '0% '+ yPos + 'px';
 
-                            // Move the background
-                            $bgobj.css({ backgroundPosition: coords });
-            }); 
-    });
+    //                         // Move the background
+    //                         $bgobj.css({ backgroundPosition: coords });
+    //         }); 
+    // });
 
     //Portfolio Filtering And Animation
     var works = jQuery('ul#works');
@@ -115,11 +115,12 @@ jQuery(window).load(function(){
 
             var getCurrentPortTop = jQuery('section.works').offset()
                     ,showPortf = jQuery(this).attr('href');
+    
 
             jQuery('html, body').animate({scrollTop: getCurrentPortTop.top}, 500, function(){
 
-                    if(jQuery('section.works article.work.slided').length > 0){
-                            jQuery('section.works article.work.slided').slideUp().removeClass('slided');
+                    if(jQuery('section.works article#photo-view-full.slided').length > 0){
+                            jQuery('section.works article#photo-view-full.slided').slideUp().removeClass('slided');
                             jQuery(showPortf).slideDown(500, function(){
                                     jQuery('section.works .close').css({'display':'inline-block'});
                                     jQuery(this).addClass('slided');
@@ -144,7 +145,7 @@ jQuery(window).load(function(){
         var getCurrentPortTop = jQuery('section.works').offset();
 
         jQuery('section.works .close').css({'display':'none'});
-        jQuery('section.works article.work.slided').slideUp().removeClass('slided');
+        jQuery('section.works article#photo-view-full.slided').slideUp().removeClass('slided');
 
         jQuery('html, body').animate({scrollTop: getCurrentPortTop.top}, 500);
 
@@ -154,8 +155,8 @@ jQuery(window).load(function(){
 
     jQuery('.filters li a').click(function(){  
 
-        if(jQuery('section.works article.work.slided').length > 0){
-                jQuery('section.works article.work.slided').slideUp();
+        if(jQuery('section.works article#photo-view-full.slided').length > 0){
+                jQuery('section.works article#photo-view-full.slided').slideUp();
         }
 
         jQuery('.filters li').removeClass();

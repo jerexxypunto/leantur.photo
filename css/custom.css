@@ -1,3 +1,43 @@
 #services article.service h3{
     margin-top: 20px;
 }
+
+#works img {
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#works li figcaption span{
+    text-transform: uppercase;
+}
+
+#photo-view-full{
+    position: fixed;
+    top: 5vh;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    
+}
+
+
+#photo-view-full img {
+    height: 90vh;
+    object-fit: contain;
+}
+
+#photo-view-full > .row{
+    position: relative;
+}
+
+#photo-view-full a.close{
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    color: #fff;
+    z-index: 11;
+    width: 1em;
+    font-size: 3em;
+}
