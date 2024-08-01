@@ -46,6 +46,7 @@
     display: grid;
     grid-template-columns: repeat( auto-fit , minmax( 300px, 1fr ) );
     grid-template-rows: 90vh;
+    padding: 0;
 }
 
 .fotos-cluster li {
@@ -99,4 +100,24 @@
 .fotos-cluster li:hover img{
     transform: scale(1.1);
     filter: brightness(50%);
+}
+
+
+
+#about .imageholder {
+
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+
+    img {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(2) translateY(70px);
+    }
+}
+
+#about .imageholder .text div a.cta{
+    border-color: #000;
 }
