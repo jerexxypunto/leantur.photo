@@ -48,11 +48,18 @@
     grid-template-rows: 90vh;
 }
 
-.fotos-cluster li a {
+.fotos-cluster li {
     width: 100% !important;
     height: 100%;
     overflow: hidden;
     position: relative;
+   
+}
+
+.fotos-cluster li a {
+    
+    width: 100%;
+    height: 100%;
 }
 
 .fotos-cluster li button{
