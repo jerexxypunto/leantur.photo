@@ -41,3 +41,55 @@
     width: 1em;
     font-size: 3em;
 }
+
+.fotos-cluster {
+    display: grid;
+    grid-template-columns: repeat( auto-fit , minmax( 300px, 1fr ) );
+    grid-template-rows: 90vh;
+}
+
+.fotos-cluster li {
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fotos-cluster li button{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 3em;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    height: max-content;
+    padding: 0 10px;
+    transition: .2s ease-in-out;
+}
+
+.fotos-cluster li:hover button{
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+
+
+#fotos.fotos-cluster h4{
+    margin: 0;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+#fotos.fotos-cluster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s ease-in-out;
+}
+
+.fotos-cluster li:hover img{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
