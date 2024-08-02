@@ -38,11 +38,34 @@ images.forEach( (li, pos ) => {
         link = li.querySelector("a");
         link.addEventListener("click", (e) => {
             const nodo = e.target;
+            const img = nodo.querySelector("img");
             
-            //const parent = nodo.parentElement.parentElement.parentElement;
-            url = nodo.querySelector("img").src;
+            
+            url = img.src;
 
-            console.log(url);
+            // alto del viewport
+            const alto = window.innerHeight;
+            
+
+            // alto de la imagen.
+            const altoImg = img.naturalHeight;
+
+            // ancho de la imagen.
+            const anchoImg = img.naturalWidth;
+
+            // Es una imagen vertical cuando el alto es mayor al ancho.
+            const esVertical = altoImg > anchoImg;
+
+            // Si el alto de la imagen es menor al alto del viewport, entonces la imagen no se ajusta al viewport.
+            if ( esVertical ){
+                document.querySelector("article#photo-view-full img").classList.remove("no-full-height");
+                document.querySelector("article#photo-view-full img").classList.add("full-height");
+            } else {
+            
+                document.querySelector("article#photo-view-full img").classList.remove("full-height");
+                document.querySelector("article#photo-view-full img").classList.add("no-full-height");
+            }
+
 
             document.querySelector("article#photo-view-full img").src = url;
           

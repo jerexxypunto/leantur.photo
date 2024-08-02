@@ -26,7 +26,10 @@
 #photo-view-full img {
     height: 90vh;
     object-fit: contain;
-    transform: scale(1.7);
+}
+
+#photo-view-full img.no-full-height{
+    transform: scale(1.3);
 }
 
 #photo-view-full > .row{
