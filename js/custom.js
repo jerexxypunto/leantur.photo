@@ -38,8 +38,11 @@ images.forEach( (li, pos ) => {
         link = li.querySelector("a");
         link.addEventListener("click", (e) => {
             const nodo = e.target;
-            const parent = nodo.parentElement.parentElement.parentElement;
-            url = parent.querySelector("img").src;
+            
+            //const parent = nodo.parentElement.parentElement.parentElement;
+            url = nodo.querySelector("img").src;
+
+            console.log(url);
 
             document.querySelector("article#photo-view-full img").src = url;
           
