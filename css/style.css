@@ -361,6 +361,22 @@ section.parallax {
   background-repeat: no-repeat;
 }
 
+@media screen and ( max-width: 400px ) {
+  section.parallax {
+    height: 25vh;
+    background-size: cover;
+    background-position-y: -50px;
+  }
+
+  
+}
+
+@media screen and ( max-width: 641px ){
+  .caroufredsel_wrapper{
+    top: 10px !important;
+  }
+}
+
 section.services {
   width: 100%;
   display: block;

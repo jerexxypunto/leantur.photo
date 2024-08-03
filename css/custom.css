@@ -135,3 +135,52 @@
 #about .imageholder .text div a.cta{
     border-color: #000;
 }
+
+section.about .sliderHolder .slide {
+    height: 370px !important;
+    overflow: hidden;
+}
+
+section.about .sliderHolder .slide img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+@media screen and ( max-width: 512px ){
+    #about .imageholder{
+        width: 100%;
+    }
+}
+
+@media screen and ( min-width: 642px ){
+
+    #about .profile{
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    #about .imageholder{
+        width: 75% ;
+        margin-bottom: 10px;
+       
+    }
+}
+
+@media screen and ( max-width: 1022px ){
+
+    #about .imageholder{
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+  
+      img{
+        transform: scale(1.2) translateY(70px);
+      }
+      
+    }
+    .caroufredsel_wrapper{
+      top: 10px ;
+    }
+  }
