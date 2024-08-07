@@ -128,7 +128,7 @@
         width: 200%;
         height: 100%;
         object-fit: cover;
-        transform: scale(2) translateY(15px);
+        transform: scale(2) translateY(40px);
     }
 }
 
@@ -147,6 +147,11 @@ section.about .sliderHolder .slide img{
     object-position: center;
     object-fit: cover;
 }
+
+section.parallax{
+    background-attachment: fixed;
+}
+
 
 @media screen and ( max-width: 512px ){
         #about .imageholder{
@@ -181,7 +186,7 @@ section.about .sliderHolder .slide img{
         overflow: hidden;
     
         img{
-            transform: scale(1.2) translateY(70px);
+            transform: scale(1.2) translateY(-100px);
         }
         
         }
