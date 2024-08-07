@@ -128,7 +128,7 @@
         width: 200%;
         height: 100%;
         object-fit: cover;
-        transform: scale(2) translateY(70px);
+        transform: scale(2) translateY(15px);
     }
 }
 
@@ -149,9 +149,9 @@ section.about .sliderHolder .slide img{
 }
 
 @media screen and ( max-width: 512px ){
-    #about .imageholder{
-        width: 100%;
-    }
+        #about .imageholder{
+            width: 100%;
+        }
 }
 
 @media screen and ( min-width: 642px ){
@@ -161,26 +161,31 @@ section.about .sliderHolder .slide img{
         place-items: center;
         overflow: hidden;
     }
+}
+
+
+
+@media screen and ( min-width: 642px ) and ( max-width: 1022px ){
+
     #about .imageholder{
         width: 75% ;
         margin-bottom: 10px;
-       
     }
 }
 
 @media screen and ( max-width: 1022px ){
-
+    
     #about .imageholder{
         display: grid;
         place-items: center;
         overflow: hidden;
-  
-      img{
-        transform: scale(1.2) translateY(70px);
-      }
-      
-    }
-    .caroufredsel_wrapper{
-      top: 10px ;
-    }
-  }
+    
+        img{
+            transform: scale(1.2) translateY(70px);
+        }
+        
+        }
+        .caroufredsel_wrapper{
+            top: 10px ;
+        }
+}

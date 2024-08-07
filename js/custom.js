@@ -77,3 +77,22 @@ images.forEach( (li, pos ) => {
 
 
 } );
+
+// obteng
+const form = document.querySelector("#handlleSubmitMessage");
+
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    // Obtener los datos del formulario.
+    const srcElement = e.srcElement;
+    const data = [ ... srcElement.elements ].map( e => {  return {  'name' : e.name , 'type' : e.type, 'value' :  e.value} } );
+
+    const msg = `${data[2].value} \n contacto: ${data[0].value} - ${data[1].value}`;
+
+    link = `https://api.whatsapp.com/send/?phone=%2B56949120563&text&type=phone_number&app_absent=0&text=${msg}`;
+
+    window.open(link, '_blank');
+
+});
